@@ -1,0 +1,22 @@
+Author: Zheyuan Li(Elle Li)
+This document performs a run time analysis(Worst Case Big-O Notation) of my solution.
+
+Task0.py: O(0n+10)->O(1)
+reasons: Task0.py has 10 code lines, which run only once and won't change with the input .csv file size. So this is a constant. -> O(0n+10)
+Big O notation: O(1)
+
+Task1.py: O(4n+13)->O(n)
+reasons: Task1.py has 13 code lines that only run once. And there are 2 for-loops with 2 lines inside which will run n times linearly with input text.csv and calls.csv file size n, respectively. Then the run time will increase correspondingly. -> O(2n+2n+13)
+Big O notation: O(n)
+
+Task2.py: O(4n+9)->O(n)
+reasons: Task2.py has 9 code lines which only run once. And there is 1 for-loop with 4 condition lines inside(max possible code lines in the worst case for each loop) for input calls.csv. -> O(4n+9)
+Big O notation: O(n)
+
+Task3.py: O(8n+17)->O(n)
+reasons: Task3.py has 17 code lines which only run once(7 lines in partA and 4 lines in partB). And in part A, there are 1 for-loop with 3 condition lines inside(max possible code lines in the worst case for each loop) ->O(3n), and 1 for-loop with 1 line inside which will run linearly for input size n -> O(n). In part B, there is 1 for-loop with 4 condition lines inside(max possible code lines in the worst case for each loop) for input calls.csv -> O(4n). -> O(3n+n+4n+17)
+Big O notation: O(n)
+
+Task4.py: O(5n+11)->O(n) 
+reasons: Task4.py has 11 code lines which only run once. And there are 1 for-loop with 2 lines inside which will run linearly with input texts.csv size n ->O(2n). 1 for-loop with 2 lines inside which will run linearly with input calls.csv size n -> O(2n). 1 more for-loop with 1 line inside running linearly with input size n O(n).->O(2n+2n+n+11)
+Big O notation: O(n)
